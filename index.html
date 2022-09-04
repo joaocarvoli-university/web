@@ -3,73 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <title>Tzeeter</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css" media=”screen” />
-  <link rel="icon" type="image/x-icon" href="images/icons/corvo.png">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="screen" />
+  <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.ico">
 </head>
 <body>
-  <div>
-    <ul>
-      <li><a href="#"> Home </a></li>
-      <li><a href="#"> Explorer </a></li>
-      <li><a href="#"> Notifications </a></li>
-      <li><a href="#"> Messages </a></li>
-      <li><a href="#"> Bookmarks </a></li>
-      <li><a href="#"> Lists </a></li>
-      <li><a href="#"> Profile </a></li>
-      <li><a href="#"> More </a></li>
+  <div class="navigation_publications">
+    <ul class="navigation_publications">
+      <li><a href="#" class="navigation_publications_links"> Home </a></li>
+      <li><a href="#" class="navigation_publications_links"> Explorer </a></li>
+      <li><a href="#" class="navigation_publications_links"> Notifications </a></li>
+      <li><a href="#" class="navigation_publications_links"> Messages </a></li>
+      <li><a href="#" class="navigation_publications_links"> Bookmarks </a></li>
+      <li><a href="#" class="navigation_publications_links"> Lists </a></li>
+      <li><a href="#" class="navigation_publications_links"> Profile </a></li>
+      <li><a href="#" class="navigation_publications_links"> More </a></li>
     </ul>
   </div>
   
-  <div class="alet">
-    <img src="images/profile.jpeg" alt="Profile user photo" width="64" height="64">
-    <h4>João Victor Carvalho</h4>
-    <h5>@joaocarvoli</h5>
-    <h6>Computer Engineering Student and Full Stack Developer @Federal University of Ceara</h6>
+  <div class="profile">
+    <img class="profile" src="assets/images/profile.jpeg" alt="Profile user photo" width="64" height="64">
+    <h4 class="profile">João Victor Carvalho</h4>
+    <h5 class="profile" >@joaocarvoli</h5>
+    <h6 class="profile" >Computer Engineering Student and Full Stack Developer @Federal University of Ceara</h6>
   </div>
   <div>
     <button>Edit profile</button>
   </div>
-  <div>
-    <ul>
-      <li>Fortaleza - Ceará</li>
-      <li>Joined on August 2022</li>
 
-      <li>X Following</li>
-      <li>X Followers</li>
-    </ul>
+  <ul class="navigation_publications">
+    <li class="navigation_publications">Fortaleza - Ceará</li>
+    <li class="navigation_publications">Joined on August 2022</li>
+
+    <div class="stats">
+      <li class="stats"> X <a class="stats">Following</a></li>
+      <li class="stats"> X <a class="stats">Followers</a></li>
+    </div>
+  </ul>
+
+  <div class="navigation_publications">
     <p>
-      <a href="">Tzeets</a>  <a href="">Tzeets & replies</a> <a href="">Media</a> <a href="">Links</a>
-    </p>
+      <a class="navigation_publications_links" href="">Tzeets</a>  <a class="navigation_publications_links" href="">Tzeets & replies</a> <a class="navigation_publications_links" href="">Media</a> <a class="navigation_publications_links" href="">Links</a>
+    </p>  
   </div>
+  
   <div>
     <h4>Posts</h4>
-    <div>
+    
+    <div class="tzeet">
       <p>
-        <p>
-          Martin Luther King Jr. @lutherking Aug. 28, 1963
+        <p class="tzeet_info">
+          Martin Luther King Jr. @lutherking <span class="tzeet_info">Aug. 28, 1963</span>
         </p>
-        <p>
+        <p class="tzeet_content">
           "I have a dream!" 
         </p>
-        <p>
-          <a href="">Reply</a>  <a href="">Retzeet</a> <a href="">Like</a> <a href="">Share</a>
+        <p class="actions">
+          <a class="actions_links_reply_share" href="">Reply</a>  <a class="actions_links_retzeet" href="">Retzeet</a> <a class="actions_links_like" href="">Like</a> <a class="actions_links_reply_share" href="">Share</a>
         </p>
       </p>
     </div>
-    <div>
+
+
+    <div class="tzeet">
       <p>
-        <p>
-           Billy Graham @billy Feb 21,1999
+        <p class="tzeet_info">
+          Billy Graham @billy <span class="tzeet_info">Feb 21,1999</span>
         </p>
-        <p>
+        <p class="tzeet_content">
           "When wealth is lost, nothing is lost; when health is lost, something is lost; when character is lost, all is lost.""
         </p>
-        <p>
-          <a href="">Reply</a>  <a href="">Retzeet</a> <a href="">Like</a> <a href="">Share</a>
+        <p class="actions">
+          <a class="actions_links_reply_share" href="">Reply</a>  <a class="actions_links_retzeet" href="">Retzeet</a> <a class="actions_links_like" href="">Like</a> <a class="actions_links_reply_share" href="">Share</a>
         </p>
       </p>
     </div>
-  </div>
+  <div/>
 
 </body>
 </html>
