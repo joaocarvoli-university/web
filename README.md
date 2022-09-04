@@ -1,7 +1,8 @@
 # Web development course :computer:
 
-## Work 01 :clipboard:
+## Work 02 :clipboard:
 
-This is the first work about the web development course. The objective is to build the skeleton of the application **Tzeeter** that we will build.
-<a href="https://profbruno-ufc-qx.github.io/web-development/atividades/le01.html">Description work<a/>
+Now it's the time to put some CSS into the previous work.
+The requiriments and the objectives are in the bellow link :arrow_down:
+<a href="https://profbruno-ufc-qx.github.io/web-development/atividades/le02.html">Description work<a/>
 
