@@ -3,22 +3,54 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Tzeeter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="screen" />
     <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.ico">
+    <title>Tzeeter</title>
   </head>
 
   <body>
     <div class="navigation_publications">
+      <img class="tiziu" src="assets/images/icons/tiziu.png" alt="Tiziu" width="30">
       <ul class="navigation_publications">
-        <li><a href="#" class="navigation_publications_links"> Home </a></li>
-        <li><a href="#" class="navigation_publications_links"> Explorer </a></li>
-        <li><a href="#" class="navigation_publications_links"> Notifications </a></li>
-        <li><a href="#" class="navigation_publications_links"> Messages </a></li>
-        <li><a href="#" class="navigation_publications_links"> Bookmarks </a></li>
-        <li><a href="#" class="navigation_publications_links"> Lists </a></li>
-        <li><a href="#" class="navigation_publications_links"> Profile </a></li>
-        <li><a href="#" class="navigation_publications_links"> More </a></li>
+        <li>
+          <a href="#home" class="navigation_publications_links">
+            <i class="bi bi-house"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#explorer" class="navigation_publications_links">
+            <i class="bi bi-search"></i>
+            <span>Explorer</span>
+          </a>
+        </li>
+        <li>
+          <a href="#notifications" class="navigation_publications_links">
+            <i class="bi bi-bell"></i>
+            <span>Notifications</span>
+          </a>
+        </li>
+        <li>
+          <a href="#messages" class="navigation_publications_links">
+            <i class="bi bi-chat"></i>
+            <span>Messages</span>
+          </a>
+        </li>
+        <li>
+          <a href="#profile" class="navigation_publications_links">
+            <i class="bi bi-person"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="#more" class="navigation_publications_links">
+            <i class="bi bi-three-dots"></i>
+            <span>More</span>
+          </a>
+        </li>
       </ul>
     </div>
     
@@ -29,22 +61,37 @@
       <h6 class="profile" >Computer Engineering Student and Full Stack Developer @Federal University of Ceara</h6>
     </div>
     <div>
-      <button>Edit profile</button>
+      <a href="#edit_profile">
+        <button type="button" class="btn btn-primary rounded-pill" >Edit Profile</button>
+      </a>
+    </div>
+
+    <div class="tzeet">
+      <button class="btn btn-primary tzeet">Tzeet</button>
     </div>
 
     <ul class="navigation_publications">
-      <li class="navigation_publications">Fortaleza - Ceará</li>
-      <li class="navigation_publications">Joined on August 2022</li>
+      <li class="navigation_publications">
+        <i class="bi bi-map"></i>
+        <span>Fortaleza - Ceará</span>
+      </li>
+      <li class="navigation_publications">
+        <i class="bi bi-calendar"></i>
+        <span>Joined on August 2022</span>
+      </li>
 
       <div class="stats">
-        <dl class="stats"> X <a class="stats">Following</a></dl>
-        <dl class="stats"> X <a class="stats">Followers</a></dl>
+        <dl> X <a class="stats">Following</a></dl>
+        <dl> X <a class="stats">Followers</a></dl>
       </div>
     </ul>
 
     <div class="navigation_publications">
       <p>
-        <a class="navigation_publications_links" href="">Tzeets</a>  <a class="navigation_publications_links" href="">Tzeets & replies</a> <a class="navigation_publications_links" href="">Media</a> <a class="navigation_publications_links" href="">Links</a>
+        <a class="navigation_publications_links" href="">Tzeets</a>  
+        <a class="navigation_publications_links" href="">Tzeets & replies</a> 
+        <a class="navigation_publications_links" href="">Media</a> 
+        <a class="navigation_publications_links" href="">Links</a>
       </p>  
     </div>
     
@@ -60,7 +107,22 @@
             "I have a dream!" 
           </p>
           <p class="actions">
-            <a class="actions_links_reply_share" href="">Reply</a>  <a class="actions_links_retzeet" href="">Retzeet</a> <a class="actions_links_like" href="">Like</a> <a class="actions_links_reply_share" href="">Share</a>
+            <a class="actions_links_reply_share" href="">
+              <i class="bi bi-reply"></i>
+              <span>Reply</span>
+            </a>
+            <a class="actions_links_retzeet" href="">
+              <i class="bi bi-arrow-clockwise"></i>
+              <span>Retzeet</span>
+            </a>
+            <a class="actions_links_like" href="">
+              <i class="bi bi-heart"></i>
+              <span>Like</span>
+            </a>
+            <a class="actions_links_reply_share" href="">
+              <i class="bi bi-send"></i>
+              <img src="/assets/images/icons/share.png"  width=20>
+            </a>
           </p>
         </p>
       </div>
@@ -74,10 +136,26 @@
             "When wealth is lost, nothing is lost; when health is lost, something is lost; when character is lost, all is lost."
           </p>
           <p class="actions">
-            <a class="actions_links_reply_share" href="">Reply</a>  <a class="actions_links_retzeet" href="">Retzeet</a> <a class="actions_links_like" href="">Like</a> <a class="actions_links_reply_share" href="">Share</a>
+            <a class="actions_links_reply_share" href="">
+              <i class="bi bi-reply"></i>
+              <span>Reply</span>
+            </a>
+            <a class="actions_links_retzeet" href="">
+              <i class="bi bi-arrow-clockwise"></i>
+              <span>Retzeet</span>
+            </a>
+            <a class="actions_links_like" href="">
+              <i class="bi bi-heart"></i>
+              <span>Like</span>
+            </a>
+            <a class="actions_links_reply_share" href="">
+              <i class="bi bi-send"></i>
+              <img src="/assets/images/icons/share.png"  width=20>
+            </a>
           </p>
         </p>
       </div>
     <div/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>
