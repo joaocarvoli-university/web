@@ -3,35 +3,7 @@ body {
   color: rgb(15,20,25);
 }
 
-img.profile {
-    border-radius: 50%;
-}
-
-h4.profile {
-  color: rgb(15, 20, 25);
-}
-
-h5.profile {
-  color: rgb(83, 100, 113);
-}
-
-h6.profile {
-  color: rgb(15, 20, 25);
-}
-
-button.tzeet {
-  background-color: rgba(34, 144, 152, 0.534);
-  border-color:rgba(34, 144, 152, 0.174);
-  margin: 0;
-}
-
-button.tzeet:hover {
-  background-color: rgb(34, 144, 152);
-  border-color: rgb(34, 144, 152);
-  margin: 0;
-}
-
-
+/* NAVIGATION */
 div.navigation_publications {
   background-color: rgb(255, 255, 255);
   color: rgb(15,20,25);
@@ -59,6 +31,24 @@ a.navigation_publications_links:hover {
   font-weight: bold;
 }
 
+
+/*PROFILE*/
+img.profile {
+    border-radius: 50%;
+}
+
+h4.profile {
+  color: rgb(15, 20, 25);
+}
+
+h5.profile {
+  color: rgb(83, 100, 113);
+}
+
+h6.profile {
+  color: rgb(15, 20, 25);
+}
+
 div.stats {
 color: rgb(15,20,25);
 }
@@ -75,7 +65,9 @@ a.stats {
 
 a.stats:hover {
   text-decoration: underline;
-}  
+} 
+
+/* POST' ACTIONS */
 
 a.actions_links {
   color: rgb(83, 100, 113);
@@ -117,6 +109,20 @@ a.actions_links_like:hover {
   font-weight: bold;
 }
 
+/* TZEET */
+
+button.tzeet {
+  background-color: rgba(34, 144, 152, 0.534);
+  border-color:rgba(34, 144, 152, 0.174);
+  margin: 0;
+}
+
+button.tzeet:hover {
+  background-color: rgb(34, 144, 152);
+  border-color: rgb(34, 144, 152);
+  margin: 0;
+}
+
 p.tzeet_content:hover {
   background-color: rgba(230, 201, 38, 0.264);
   border-radius: 15px;
@@ -129,6 +135,8 @@ p.tzeet_info {
 span.tzeet_info {
   color: rgb(83, 100, 113);
 }
+
+/* USER'S TZEET */
 
 a.user_reference {
   margin: 1;
