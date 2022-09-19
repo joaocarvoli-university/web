@@ -14,7 +14,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-3 p-1">
+        <div class="col-2 p-3">
           <div class="navigation_publications">
             <img class="tiziu" src="assets/images/icons/tiziu.png" alt="Tiziu" width="30">
             <ul class="navbar_actions">
@@ -60,15 +60,15 @@
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-7 main">
           <div class="profile_section">
-            <div class="profile">
-              <div class="profile_bar">
-                <img id="image_profile" class="profile profile_bar_item rounded-circle" src="assets/images/profile.jpeg" alt="Profile user photo" width="120">
-                <a id="edit_profile" href="#edit_profile">
-                  <button type="button" class="shadow btn btn-primary rounded-pill profile_bar_item" >Edit Profile</button>
-                </a>
-              </div>
+            <div class="profile_bar">
+              <img id="image_profile" class="profile profile_bar_item rounded-circle" src="assets/images/profile.jpeg" alt="Profile user photo" width="120">
+              <a id="edit_profile" href="#edit_profile">
+                <button type="button" class="shadow btn btn-primary rounded-pill profile_bar_item" >Edit Profile</button>
+              </a>
+            </div>
+            <div class="profile_info">
               <h4 id="user_complete_name">João Victor Carvalho</h4>
               <h5 id="username">@joaocarvoli</h5>
               <h6 id="user_bio">Computer Engineering Student and Back-End Developer @Federal University of Ceara</h6>
@@ -93,18 +93,16 @@
               </li>
             </ul>
   
-            <div class="navigation_publications_actions">
+            <div class="navigation_publications_actions rounded shadow-sm">
               <p>
-                <a class="navigation_publications_links p-2" href="#tzeets">Tzeets</a>  
-                <a class="navigation_publications_links p-2" href="#replies">Tzeets & replies</a> 
-                <a class="navigation_publications_links p-2" href="#media">Media</a> 
-                <a class="navigation_publications_links p-2" href="#links">Links</a>
+                <a class="navigation_publications_links p-3 rounded" href="#tzeets">Tzeets</a>  
+                <a class="navigation_publications_links p-3 rounded" href="#replies">Tzeets & replies</a> 
+                <a class="navigation_publications_links p-3 rounded" href="#media">Media</a> 
+                <a class="navigation_publications_links p-3 rounded" href="#links">Links</a>
               </p>  
             </div>
           </div>
-          <hr>
           <div>
-            <h4>Posts</h4>
             <hr>
             <div class="tzeet">
               <p class="tzeet_info">
@@ -114,19 +112,19 @@
                 "I have a dream!" 
               </p>
               <p class="actions">
-                <a class="actions_links_reply_share p-sm-2" href="">
+                <a class="actions_links_reply_share p-sm-2 rounded" href="">
                   <i class="bi bi-reply"></i>
                   <span>Reply</span>
                 </a>
-                <a class="actions_links_retzeet p-sm-2" href="">
+                <a class="actions_links_retzeet p-sm-2 rounded" href="">
                   <i class="bi bi-arrow-clockwise"></i>
                   <span>Retzeet</span>
                 </a>
-                <a class="actions_links_like p-sm-2" href="">
+                <a class="actions_links_like p-sm-2 rounded" href="">
                   <i class="bi bi-heart"></i>
                   <span>Like</span>
                 </a>
-                <a class="actions_links_share p-sm-2" href="">
+                <a class="actions_links_share p-sm-2 rounded" href="">
                   <i class="bi bi-share"></i>
                 </a>
               </p>
@@ -140,19 +138,19 @@
                 "When wealth is lost, nothing is lost; when health is lost, something is lost; when character is lost, all is lost."
               </p>
               <p class="actions">
-                <a class="actions_links_reply_share p-sm-2" href="">
+                <a class="actions_links_reply_share p-sm-2 rounded" href="">
                   <i class="bi bi-reply"></i>
                   <span>Reply</span>
                 </a>
-                <a class="actions_links_retzeet p-sm-2" href="">
+                <a class="actions_links_retzeet p-sm-2 rounded" href="">
                   <i class="bi bi-arrow-clockwise"></i>
                   <span>Retzeet</span>
                 </a>
-                <a class="actions_links_like p-sm-2" href="">
+                <a class="actions_links_like p-sm-2 rounded" href="">
                   <i class="bi bi-heart"></i>
                   <span>Like</span>
                 </a>
-                <a class="actions_links_share p-sm-2" href="">
+                <a class="actions_links_share p-sm-2 rounded" href="">
                   <i class="bi bi-share"></i>
                 </a>
               </p>
@@ -160,12 +158,11 @@
             <hr>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-3 p-3">
           <div class="input-group">
             <div class="input-group-prepend">
                 <div class="input-group-text rounded" id="btnGroupAddon"><i class="bi bi-search"></i></div>
             </div>
-
             <input type="text" class="form-control bg-light search-button" placeholder="@username">
           </div>
           <div class="suggestion">
