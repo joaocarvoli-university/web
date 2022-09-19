@@ -163,3 +163,28 @@ span.tzeet_info {
   font-weight: bold;
   background-color: rgba(7, 12, 16, 0.178);
 }
+
+/* Suggestion */
+
+.suggestion {
+  background-color: rgba(83, 100, 113, 0.092);
+}
+
+.suggestion_user:hover {
+  text-decoration: underline;
+}
+
+.recommendation {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: flex-end;
+}
+
+.recommendation:hover {
+  background-color: rgba(83, 100, 113, 0.218);
+}
+
+.see-more {
+  text-decoration: underline;
+}
