@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="style/profile.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="style/index.css" media="screen" />
+    <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.ico">
+    <title>Tzeeter</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-2 p-3">
+          <div class="navigation_publications">
+            <img class="tiziu" src="assets/images/icons/tiziu.png" alt="Tiziu" width="30">
+            <ul class="navbar_actions">
+              <li>
+                <a href="#home" class="navbar_links p-2">
+                  <i class="bi bi-house"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="#explorer" class="navbar_links p-1">
+                  <i class="bi bi-search"></i>
+                  <span>Explorer</span>
+                </a>
+              </li>
+              <li>
+                <a href="#notifications" class="navbar_links p-1">
+                  <i class="bi bi-bell"></i>
+                  <span>Notifications</span>
+                </a>
+              </li>
+              <li>
+                <a href="#messages" class="navbar_links p-1">
+                  <i class="bi bi-chat"></i>
+                  <span>Messages</span>
+                </a>
+              </li>
+              <li>
+                <a href="pages/profile.html" class="navbar_links p-1">
+                  <i class="bi bi-person"></i>
+                  <span>Profile</span>
+                </a>
+              </li>
+              <li>
+                <a href="#more" class="navbar_links p-1">
+                  <i class="bi bi-three-dots"></i>
+                  <span>More</span>
+                </a>
+              </li>
+            </ul>
+            <div class="tzeet">
+              <button class="shadow btn btn-primary rounded-pill profile_bar_item p-2" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">Tzeet</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-7 main">
+          <h2>Home</h2>
+          <div class="row">
+            <div class="col-2">
+              <img src="assets/images/man_2.png" width="64" height="64">
+            </div>
+            <div class="col-10 d-flex flex-column">
+              <div class="d-flex flex-column">
+                <form class="shadow-sm">
+                  <textarea id="textbox" class="form-control" placeholder="What do you thinking about?" rows="2"></textarea>
+                </form>
+                <a class="reply"><i class="bi bi-globe"></i><span>Everyone can reply</span></a>
+              </div> 
+              <div class="d-flex flex-row justify-content-between">
+                <div>
+                  <a href=""><i class="bi bi-card-image"></i></a>
+                  <a href=""><i class="bi bi-filetype-gif"></i></a>
+                  <a href=""><i class="bi bi-emoji-smile"></i></a>
+                  <a href=""><i class="bi bi-calendar-date"></i></a>
+                  <a href=""><i class="bi bi-geo-alt"></i></a>
+                </div>
+                <div class="d-flex align-items-center">
+                  <span id="char_count"></span>
+                  <span>|</span>
+                  <a href=""><i class="bi bi-plus-circle"></i></a>
+                  <button id="sendButton" class="shadow btn btn-primary rounded-pill p-1">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="tzeets">
+            <hr>
+            <div class="tzeet">
+              <p class="tzeet_info">
+                Martin Luther King Jr. <a href="" class="user_reference"> @lutherking</a> <span class="tzeet_info">Aug. 28, 1963</span>
+              </p>
+              <p class="tzeet_content">
+                "I have a dream!" 
+              </p>
+              <p class="actions">
+                <a class="actions_links_reply_share p-sm-2 rounded" href="">
+                  <i class="bi bi-reply"></i>
+                  <span>Reply</span>
+                </a>
+                <a class="actions_links_retzeet p-sm-2 rounded" href="">
+                  <i class="bi bi-arrow-clockwise"></i>
+                  <span>Retzeet</span>
+                </a>
+                <a class="actions_links_like p-sm-2 rounded" href="">
+                  <i class="bi bi-heart"></i>
+                  <span>Like</span>
+                </a>
+                <a class="actions_links_share p-sm-2 rounded" href="">
+                  <i class="bi bi-share"></i>
+                </a>
+              </p>
+            </div>
+            <hr>
+            <div class="tzeet">
+              <p class="tzeet_info">
+                Billy Graham <a href="" class="user_reference"> @billy</a> <span class="tzeet_info">Feb 21,1999</span>
+              </p>
+              <p class="tzeet_content">
+                "When wealth is lost, nothing is lost; when health is lost, something is lost; when character is lost, all is lost."
+              </p>
+              <p class="actions">
+                <a class="actions_links_reply_share p-sm-2 rounded" href="">
+                  <i class="bi bi-reply"></i>
+                  <span>Reply</span>
+                </a>
+                <a class="actions_links_retzeet p-sm-2 rounded" href="">
+                  <i class="bi bi-arrow-clockwise"></i>
+                  <span>Retzeet</span>
+                </a>
+                <a class="actions_links_like p-sm-2 rounded" href="">
+                  <i class="bi bi-heart"></i>
+                  <span>Like</span>
+                </a>
+                <a class="actions_links_share p-sm-2 rounded" href="">
+                  <i class="bi bi-share"></i>
+                </a>
+              </p>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div class="col-3 p-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text rounded" id="btnGroupAddon"><i class="bi bi-search"></i></div>
+            </div>
+            <input type="text" class="form-control bg-light search-button" placeholder="@username">
+          </div>
+          <div class="suggestion">
+            <div class="text-center">
+              <b> Talvez você curta!</b>
+            </div>
+            <div class="friends_recommendation">
+              <div class="recommendation">
+                <img src="assets/images/man_2.png" width="48" height="48">
+                <a class="suggestion_user" href="#john">John</a>
+                <button class="shadow btn btn-primary profile_bar_item p-1 m-3">Follow</button>
+              </div>
+              <div class="recommendation">
+                <img src="assets/images/man_3.png" width="48" height="48">
+                <a class="suggestion_user" href="#joseph">Joseph</a>
+                <button class="shadow btn btn-primary profile_bar_item p-1 m-3">Follow</button>
+              </div>
+              <div class="recommendation">
+                <img src="assets/images/woman.png" width="48" height="48">
+                <a class="suggestion_user" href="#mary">Mary</a>
+                <button class="shadow btn btn-primary profile_bar_item p-1 m-3">Follow</button>
+              </div>
+            </div>
+            <div class="see-more">
+              <a href="#more_users">See more</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="d-flex flex-row flex-fill">
+                  <img src="assets/images/man_2.png" width="64" height="64">
+                  <div class="modal_width">
+                    <div class="d-flex flex-column">
+                      <form class="shadow-sm">
+                        <textarea id="textbox02" class="form-control" placeholder="What do you thinking about?" rows="2"></textarea>
+                      </form>
+                      <a class="reply"><i class="bi bi-globe"></i><span>Everyone can reply</span></a>
+                    </div> 
+                    <div class="d-flex flex-row justify-content-between">
+                      <div>
+                        <a href=""><i class="bi bi-card-image"></i></a>
+                        <a href=""><i class="bi bi-filetype-gif"></i></a>
+                        <a href=""><i class="bi bi-emoji-smile"></i></a>
+                        <a href=""><i class="bi bi-calendar-date"></i></a>
+                        <a href=""><i class="bi bi-geo-alt"></i></a>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <span id="char_count02"></span>
+                        <span>|</span>
+                        <a href=""><i class="bi bi-plus-circle"></i></a>
+                        <button id="sendButton02" class="shadow btn btn-primary rounded-pill p-1">Send</button>
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="../dist/profile.js"></script>
+  </body>
+</html>
