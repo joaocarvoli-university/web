@@ -8,3 +8,7 @@
   border-radius: 25px;
   background-color: rgba(29, 155, 240, 0.1);
 }
+
+.modal_width{
+  width: 100%;
+}

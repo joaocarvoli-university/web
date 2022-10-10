@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="style/home.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="style/home2.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="style/profile.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="style/index.css" media="screen" />
     <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.ico">
     <title>Tzeeter</title>
   </head>
@@ -57,25 +57,43 @@
               </li>
             </ul>
             <div class="tzeet">
-              <button class="shadow btn btn-primary rounded-pill profile_bar_item p-1">Tzeet</button>
+              <button class="shadow btn btn-primary rounded-pill profile_bar_item p-2" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">Tzeet</button>
             </div>
           </div>
         </div>
         <div class="col-7 main">
           <h2>Home</h2>
-          <div class="wdowisdwo">
-            <div>
+          <div class="row">
+            <div class="col-2">
               <img src="assets/images/man_2.png" width="64" height="64">
             </div>
-            <div>
-              <textarea maxlength="120" class="form-control" placeholder="O que você está pensando?" id="exampleFormControlTextarea1" rows="2"></textarea>
-              <a class="reply left">
-                <i class="bi bi-globe"></i>
-                <span>Everyone can reply</span>
-              </a>
+            <div class="col-10 d-flex flex-column">
+              <div class="d-flex flex-column">
+                <form class="shadow-sm">
+                  <textarea id="textbox" class="form-control" placeholder="What do you thinking about?" rows="2"></textarea>
+                </form>
+                <a class="reply"><i class="bi bi-globe"></i><span>Everyone can reply</span></a>
+              </div> 
+              <div class="d-flex flex-row justify-content-between">
+                <div>
+                  <a href=""><i class="bi bi-card-image"></i></a>
+                  <a href=""><i class="bi bi-filetype-gif"></i></a>
+                  <a href=""><i class="bi bi-emoji-smile"></i></a>
+                  <a href=""><i class="bi bi-calendar-date"></i></a>
+                  <a href=""><i class="bi bi-geo-alt"></i></a>
+                </div>
+                <div class="d-flex align-items-center">
+                  <span id="char_count"></span>
+                  <span>|</span>
+                  <a href=""><i class="bi bi-plus-circle"></i></a>
+                  <button id="sendButton" class="shadow btn btn-primary rounded-pill p-1">Send</button>
+                </div>
+              </div>
             </div>
           </div>
-          <div>
+          <hr>
+          <div class="tzeets">
             <hr>
             <div class="tzeet">
               <p class="tzeet_info">
@@ -164,9 +182,46 @@
             </div>
           </div>
         </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="d-flex flex-row flex-fill">
+                  <img src="assets/images/man_2.png" width="64" height="64">
+                  <div class="modal_width">
+                    <div class="d-flex flex-column">
+                      <form class="shadow-sm">
+                        <textarea id="textbox02" class="form-control" placeholder="What do you thinking about?" rows="2"></textarea>
+                      </form>
+                      <a class="reply"><i class="bi bi-globe"></i><span>Everyone can reply</span></a>
+                    </div> 
+                    <div class="d-flex flex-row justify-content-between">
+                      <div>
+                        <a href=""><i class="bi bi-card-image"></i></a>
+                        <a href=""><i class="bi bi-filetype-gif"></i></a>
+                        <a href=""><i class="bi bi-emoji-smile"></i></a>
+                        <a href=""><i class="bi bi-calendar-date"></i></a>
+                        <a href=""><i class="bi bi-geo-alt"></i></a>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <span id="char_count02"></span>
+                        <span>|</span>
+                        <a href=""><i class="bi bi-plus-circle"></i></a>
+                        <button id="sendButton02" class="shadow btn btn-primary rounded-pill p-1">Send</button>
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script src="../dist/index.js"></script>
+    <script src="../dist/profile.js"></script>
   </body>
 </html>
