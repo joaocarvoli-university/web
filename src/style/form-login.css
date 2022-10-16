@@ -1,0 +1,23 @@
+.form-login {
+  max-width: 300px;
+  margin:auto
+}
+
+input[type="email"] {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+input[type="password"] {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-top: 0px
+}
+
+body {
+  background-color: rgba(174, 169, 169, 0.339);
+}
+
+form {
+  background-color: rgb(255, 255, 255);
+}
