@@ -3,7 +3,7 @@ let characterCounter = document.getElementById("char_count"); // Getting DOM ele
 let sendButton = document.getElementById("sendButton"); // Getting DOM element
 const maxNumOfChars = 140;
 
-const getCharactersCount = (textArea: any) => {
+const getCharactersCount = () => {
   let numOfEnteredChars = textArea.value.length;
   let counter = maxNumOfChars - numOfEnteredChars;
   return {counter, numOfEnteredChars}
@@ -28,7 +28,7 @@ const countCharacters = () => {
 
 const disableUnusedButton = () => {
   sendButton.disabled = true;
-  let {, numOfEnteredChars} = getCharactersCount(textArea);
+  let {_ , numOfEnteredChars} = getCharactersCount(textArea);
   if(numOfEnteredChars > 0 && sendButton != null){
     sendButton.disabled = false;
   }
@@ -41,7 +41,7 @@ let characterCounter02 = document.getElementById("char_count02");
 let sendButton02 = document.getElementById("sendButton02");
 const maxNumOfChars02 = 140;
 
-const getCharactersCount02 = (textArea: any) => {
+const getCharactersCount02 = () => {
   let numOfEnteredChars = textArea02.value.length;
   let counter = maxNumOfChars02 - numOfEnteredChars;
   return {counter, numOfEnteredChars}
@@ -66,7 +66,7 @@ const countCharacters02 = () => {
 
 const disableUnusedButton02 = () => {
   sendButton02.disabled = true;
-  let {, numOfEnteredChars} = getCharactersCount(textArea02);
+  let {_ , numOfEnteredChars} = getCharactersCount(textArea02);
   if(numOfEnteredChars > 0 && sendButton != null){
     sendButton02.disabled = false;
   }
