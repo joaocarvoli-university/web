@@ -80,6 +80,53 @@ function validateYear(){
   countYear += 1
 }
 
+function leapyear(year)
+{
+return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+}
+
+var days_01 = range(1, 32)
+var days_02 = range(1, 31)
+var days_03 = range(1, 30)
+var days_04 = range(1, 29)
+var day_selected = false
+
+function validateDay(){
+  var year = document.getElementById("year");
+  var month = document.getElementById("month");
+  
+  if (day_selected == false){
+    if (['Jan', 'Mar', 'May', 'Jul', 'Aug', 'Oct', 'Dec'].includes(month.value)) {
+      days_01.forEach(item => {
+        option = document.createElement("option");
+        option.text = item;
+        day.appendChild(option)
+      });
+    } else if (['Apr', 'Jun', 'Sep', 'Nov'].includes(month.value)) {
+      days_02.forEach(item => {
+        option = document.createElement("option");
+        option.text = item;
+        day.appendChild(option)
+      });
+    } else {
+      if (leapyear(year.value)){
+        days_03.forEach(item => {
+          option = document.createElement("option");
+          option.text = item;
+          day.appendChild(option)
+        });
+      } else {
+        days_04.forEach(item => {
+          option = document.createElement("option");
+          option.text = item;
+          day.appendChild(option)
+        });
+      }
+    }
+  }
+  day_selected = true
+}
+
 
 function range(start, end) {
   return Array.apply(0, Array(end - 1))
@@ -91,3 +138,4 @@ form_register?.addEventListener("input", validateEmailRegister);
 form_register?.addEventListener("input", validatePassword);
 form_register?.addEventListener("click", validateMonth);
 form_register?.addEventListener("click", validateYear);
+form_register?.addEventListener("click", validateDay);
