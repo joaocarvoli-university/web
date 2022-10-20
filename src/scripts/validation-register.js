@@ -1,58 +1,67 @@
-/*Register form*/
-
 var form_register = document.getElementById("form-register");
-var email_register = document.getElementById("emailAddress-register");
-var text_register = document.getElementById("text-email-register");
+var emailRegister = document.getElementById("emailAddress-register");
+var textRegister = document.getElementById("text-email-register");
 
-function validateEmailRegister() {
-  var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  if ((re.test(email_register.value))) {
-    form_register.classList.add("valid")
-    form_register.classList.remove("invalid")
-    text_register.innerHTML = "Your email is valid!"
-    text_register.style.color = "green"
-  } else {
-    form_register.classList.remove("valid")
-    text_register.classList.add("invalid")
-    text_register.innerHTML = "Your email is invalid!"
-    text_register.style.color = "red"
-  }
-}
-
-
-/*Validating password */
+var year = document.getElementById("year");
+var month = document.getElementById("month");
+var day = document.getElementById("day");
 
 var password = document.getElementById("password");
 var passwordConfirmation = document.getElementById("passwordConfirmation");
-var text_password = document.getElementById("text-pass");
+var textPassword = document.getElementById("text-pass");
+
+var checkBoxButton = document.getElementById("flexCheckDefault");
+var signUpButton = document.getElementById("signUp");
+signUpButton.disabled = true
+
+var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+var countMonth = 0
+var countYear = 0
+var years = range(1900, 124).reverse()
+var days_01 = range(1, 32)
+var days_02 = range(1, 31)
+var days_03 = range(1, 30)
+var days_04 = range(1, 29)
+var day_selected = false
+
+/*Register form*/
+
+function validateEmailRegister() {
+  var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if ((re.test(emailRegister.value))) {
+    form_register.classList.add("valid")
+    form_register.classList.remove("invalid")
+    textRegister.innerHTML = "Your email is valid!"
+    textRegister.style.color = "green"
+  } else {
+    form_register.classList.remove("valid")
+    textRegister.classList.add("invalid")
+    textRegister.innerHTML = "Your email is invalid!"
+    textRegister.style.color = "red"
+  }
+}
+
+/*Validating password */
 
 function validatePassword(){
   if((password.value).length > 6 || (passwordConfirmation.value).length > 6){
     if (password.value === passwordConfirmation.value) {
       form_register.classList.add("valid")
       form_register.classList.remove("invalid")
-      text_password.innerHTML = "Password mach"
-      text_password.style.color = "green"
+      textPassword.innerHTML = "Password mach"
+      textPassword.style.color = "green"
     } else {
       form_register.classList.remove("valid")
-      text_password.classList.add("invalid")
-      text_password.innerHTML = "Password doesn't mach"
-      text_password.style.color = "red"
+      textPassword.classList.add("invalid")
+      textPassword.innerHTML = "Password doesn't mach"
+      textPassword.style.color = "red"
     }
   } else {
-    text_password.classList.add("invalid")
-    text_password.innerHTML = "The length of the password must be greater than 6"
-    text_password.style.color = "red"
+    textPassword.classList.add("invalid")
+    textPassword.innerHTML = "The length of the password must be greater than 6"
+    textPassword.style.color = "red"
   }
 }
-
-var year = document.getElementById("year");
-var month = document.getElementById("month");
-var day = document.getElementById("day");
-
-var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-var countMonth = 0
 
 function validateMonth(){
   if (countMonth < 1) {
@@ -65,10 +74,6 @@ function validateMonth(){
   countMonth += 1
 }
 
-var countYear = 0
-
-var years = range(1900, 124).reverse()
-
 function validateYear(){
   if (countYear < 1) {
     years.forEach(item => {
@@ -79,17 +84,6 @@ function validateYear(){
   }
   countYear += 1
 }
-
-function leapyear(year)
-{
-return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
-}
-
-var days_01 = range(1, 32)
-var days_02 = range(1, 31)
-var days_03 = range(1, 30)
-var days_04 = range(1, 29)
-var day_selected = false
 
 function validateDay(){
   var year = document.getElementById("year");
@@ -109,33 +103,46 @@ function validateDay(){
         day.appendChild(option)
       });
     } else {
-      if (leapyear(year.value)){
-        days_03.forEach(item => {
-          option = document.createElement("option");
-          option.text = item;
-          day.appendChild(option)
-        });
-      } else {
-        days_04.forEach(item => {
-          option = document.createElement("option");
-          option.text = item;
-          day.appendChild(option)
-        });
+        if (leapyear(year.value)){
+          days_03.forEach(item => {
+            option = document.createElement("option");
+            option.text = item;
+            day.appendChild(option)
+          });
+        } else {
+          days_04.forEach(item => {
+            option = document.createElement("option");
+            option.text = item;
+            day.appendChild(option)
+          });
+        }
       }
     }
-  }
   day_selected = true
 }
 
+function checkBox(){
+  console.log(checkBoxButton.checked)
+  if (checkBoxButton.checked == true){
+    signUpButton.disabled = false
+  } else {
+    signUpButton.disabled = true
+  }
+}
+
+
+function leapyear(year){
+  return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+}
 
 function range(start, end) {
   return Array.apply(0, Array(end - 1))
     .map((element, index) => index + start);
 }
 
-
-form_register?.addEventListener("input", validateEmailRegister);
-form_register?.addEventListener("input", validatePassword);
-form_register?.addEventListener("click", validateMonth);
-form_register?.addEventListener("click", validateYear);
-form_register?.addEventListener("click", validateDay);
+emailRegister?.addEventListener("input", validateEmailRegister);
+passwordConfirmation?.addEventListener("input", validatePassword);
+year?.addEventListener("click", validateYear);
+month?.addEventListener("click", validateMonth);
+day?.addEventListener("click", validateDay);
+checkBoxButton?.addEventListener("click", checkBox);
